@@ -1,0 +1,36 @@
+#include "Functions.h"
+#include "common.hpp"
+#include "natives.hpp"
+#include "script.hpp"
+#include "pointers.hpp"
+
+namespace big {
+	void CFunctions::maxVehicle(Vehicle veh) {
+		VEHICLE::SET_VEHICLE_MOD_KIT(veh, 1);
+		VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT(veh, "DSLHOOK");
+		VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT_INDEX(veh, 1);
+		VEHICLE::TOGGLE_VEHICLE_MOD(veh, 18, 1);
+		VEHICLE::TOGGLE_VEHICLE_MOD(veh, 22, 1);
+		VEHICLE::SET_VEHICLE_MOD(veh, 16, 5, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 12, 2, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 11, 3, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 14, 14, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 15, 3, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 13, 2, 0);
+		VEHICLE::SET_VEHICLE_WHEEL_TYPE(veh, 6);
+		VEHICLE::SET_VEHICLE_WINDOW_TINT(veh, 5);
+		VEHICLE::SET_VEHICLE_MOD(veh, 23, 19, 1);
+		VEHICLE::SET_VEHICLE_MOD(veh, 0, 1, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 1, 1, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 2, 1, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 3, 1, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 4, 1, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 5, 1, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 6, 1, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 7, 1, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 8, 1, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 9, 1, 0);
+		VEHICLE::SET_VEHICLE_MOD(veh, 10, 1, 0);
+		VEHICLE::TOGGLE_VEHICLE_MOD(veh, 20, 1);
+	}
+}

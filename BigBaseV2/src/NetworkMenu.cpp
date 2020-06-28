@@ -40,8 +40,7 @@ namespace big {
 									ImGui::TableNextRow();
 									ImGui::TableSetColumnIndex(0);
 									if (ImGui::Button(p.name.c_str())) {
-											/*g_c_functions.selected.insert(std::pair<CFunctions::NPlayer, bool>(p, true));*/
-										
+										/*g_c_functions.selected.insert(std::pair<CFunctions::NPlayer, bool>(p, true));*/
 									}
 									ImGui::TableSetColumnIndex(1);
 									ImGui::Text("%i/%i HP",p.health,p.maxHealth);

@@ -1031,7 +1031,6 @@ namespace FIRE
 namespace GRAPHICS
 {
 	NATIVE_DECL void SET_DEBUG_LINES_AND_SPHERES_DRAWING_ACTIVE(BOOL enabled) { invoke<Void>(0x175B6BFC15CDD0C5, enabled); } // 0x175B6BFC15CDD0C5 0x1418CA37 b323
-	NATIVE_DECL BOOL _WORLD3D_TO_SCREEN2D(float x3d, float y3d, float z3d, float* x2d, float* y2d) { return invoke<BOOL>(0x34E82F05DF2974F5, x3d, y3d, z3d, x2d, y2d); } // 0x34E82F05DF2974F5 0x1F950E4B
 	NATIVE_DECL void DRAW_DEBUG_LINE(Any p0, Any p1, Any p2, Any p3, Any p4, Any p5, Any p6, Any p7, Any p8, Any p9) { invoke<Void>(0x7FDFADE676AA3CB0, p0, p1, p2, p3, p4, p5, p6, p7, p8, p9); } // 0x7FDFADE676AA3CB0 0xABF783AB b323
 	NATIVE_DECL void DRAW_DEBUG_LINE_WITH_TWO_COLOURS(float x1, float y1, float z1, float x2, float y2, float z2, int r1, int g1, int b1, int r2, int g2, int b2, int alpha1, int alpha2) { invoke<Void>(0xD8B9A8AC5608FF94, x1, y1, z1, x2, y2, z2, r1, g1, b1, r2, g2, b2, alpha1, alpha2); } // 0xD8B9A8AC5608FF94 0xE8BFF632 b323
 	NATIVE_DECL void DRAW_DEBUG_SPHERE(float x, float y, float z, float radius, int red, int green, int blue, int alpha) { invoke<Void>(0xAAD68E1AB39DA632, x, y, z, radius, red, green, blue, alpha); } // 0xAAD68E1AB39DA632 0x304D0EEF b323
@@ -1046,6 +1045,7 @@ namespace GRAPHICS
 	NATIVE_DECL void DRAW_BOX(float x1, float y1, float z1, float x2, float y2, float z2, int red, int green, int blue, int alpha) { invoke<Void>(0xD3A9971CADAC7252, x1, y1, z1, x2, y2, z2, red, green, blue, alpha); } // 0xD3A9971CADAC7252 0xCD4D9DD5 b323
 	NATIVE_DECL void SET_BACKFACECULLING(BOOL toggle) { invoke<Void>(0x23BA6B0C2AD7B0D3, toggle); } // 0x23BA6B0C2AD7B0D3 0xC44C2F44 b323
 	NATIVE_DECL void _0xC5C8F970D4EDFF71(Any p0) { invoke<Void>(0xC5C8F970D4EDFF71, p0); } // 0xC5C8F970D4EDFF71 b877
+	NATIVE_DECL BOOL _WORLD3D_TO_SCREEN2D(float x3d, float y3d, float z3d, float* x2d, float* y2d) { return invoke<BOOL>(0x34E82F05DF2974F5, x3d, y3d, z3d, x2d, y2d); } // 0x34E82F05DF2974F5 0x1F950E4B
 	NATIVE_DECL Any _0x1DD2139A9A20DCE8() { return invoke<Any>(0x1DD2139A9A20DCE8); } // 0x1DD2139A9A20DCE8 0xBA9AD458 b323
 	NATIVE_DECL Any _0x90A78ECAA4E78453() { return invoke<Any>(0x90A78ECAA4E78453); } // 0x90A78ECAA4E78453 0xADBBA287 b323
 	NATIVE_DECL void _0x0A46AF8A78DC5E0A() { invoke<Void>(0x0A46AF8A78DC5E0A); } // 0x0A46AF8A78DC5E0A 0x9E553002 b323
@@ -1426,12 +1426,12 @@ namespace HUD
 	NATIVE_DECL BOOL BUSYSPINNER_IS_DISPLAYING() { return invoke<BOOL>(0xB2A592B04648A9CB); } // 0xB2A592B04648A9CB 0x3AF34DEF b323
 	NATIVE_DECL void _0x9245E81072704B8A(BOOL p0) { invoke<Void>(0x9245E81072704B8A, p0); } // 0x9245E81072704B8A b323
 	NATIVE_DECL void _SET_MOUSE_CURSOR_ACTIVE_THIS_FRAME() { invoke<Void>(0xAAE7CE1D63167423); } // 0xAAE7CE1D63167423 b323
-	static void _SET_TEXT_ENTRY(char* text) { invoke<Void>(0x25FBB336DF1804CB, text); } // 0x25FBB336DF1804CB 0x3E35563E
-	static void _ADD_TEXT_COMPONENT_STRING(char* text) { invoke<Void>(0x6C188BE134E074AA, text); } // 0x6C188BE134E074AA 0x27A244D8
-	static void _DRAW_TEXT(float x, float y) { invoke<Void>(0xCD015E5BB0D96A57, x, y); } // 0xCD015E5BB0D96A57 0x6F8350CE
 	NATIVE_DECL void _SET_MOUSE_CURSOR_SPRITE(int spriteId) { invoke<Void>(0x8DB8CFFD58B62552, spriteId); } // 0x8DB8CFFD58B62552 b323
 	NATIVE_DECL void _0x98215325A695E78A(BOOL p0) { invoke<Void>(0x98215325A695E78A, p0); } // 0x98215325A695E78A b323
 	NATIVE_DECL Any _0x3D9ACB1EB139E702() { return invoke<Any>(0x3D9ACB1EB139E702); } // 0x3D9ACB1EB139E702 b323
+	NATIVE_DECL void _SET_TEXT_ENTRY(char* text) { invoke<Void>(0x25FBB336DF1804CB, text); } // 0x25FBB336DF1804CB 0x3E35563E
+	NATIVE_DECL void _ADD_TEXT_COMPONENT_STRING(char* text) { invoke<Void>(0x6C188BE134E074AA, text); } // 0x6C188BE134E074AA 0x27A244D8
+	NATIVE_DECL void _DRAW_TEXT(float x, float y) { invoke<Void>(0xCD015E5BB0D96A57, x, y); } // 0xCD015E5BB0D96A57 0x6F8350CE
 	NATIVE_DECL BOOL _0x632B2940C67F4EA9(int scaleformHandle, Any* p1, Any* p2, Any* p3) { return invoke<BOOL>(0x632B2940C67F4EA9, scaleformHandle, p1, p2, p3); } // 0x632B2940C67F4EA9 b323
 	NATIVE_DECL void THEFEED_ONLY_SHOW_TOOLTIPS(BOOL toggle) { invoke<Void>(0x6F1554B0CC2089FA, toggle); } // 0x6F1554B0CC2089FA 0xA7C8594B b323
 	NATIVE_DECL void THEFEED_SET_SCRIPTED_MENU_HEIGHT(float pos) { invoke<Void>(0x55598D21339CB998, pos); } // 0x55598D21339CB998 0x1DA7E41A b323
@@ -5510,6 +5510,8 @@ namespace VEHICLE
 {
 	NATIVE_DECL Vehicle CREATE_VEHICLE(Hash modelHash, float x, float y, float z, float heading, BOOL isNetwork, BOOL thisScriptCheck, BOOL p7) { return invoke<Vehicle>(0xAF35D0D2583051B0, modelHash, x, y, z, heading, isNetwork, thisScriptCheck, p7); } // 0xAF35D0D2583051B0 0xDD75460A b323
 	NATIVE_DECL void DELETE_VEHICLE(Vehicle* vehicle) { invoke<Void>(0xEA386986E786A54F, vehicle); } // 0xEA386986E786A54F 0x9803AF60 b323
+	NATIVE_DECL void _SET_VEHICLE_ENGINE_POWER_MULTIPLIER(Vehicle vehicle, float value) { invoke<Void>(0x93A3996368C94158, vehicle, value); } // 0x93A3996368C94158 0xE943B09C
+	NATIVE_DECL void _SET_VEHICLE_ENGINE_TORQUE_MULTIPLIER(Vehicle vehicle, float value) { invoke<Void>(0xB59E4BD37AE292DB, vehicle, value); } // 0xB59E4BD37AE292DB 0x642DA5AA
 	NATIVE_DECL void _0x7D6F9A3EF26136A0(Vehicle vehicle, BOOL toggle, BOOL p2) { invoke<Void>(0x7D6F9A3EF26136A0, vehicle, toggle, p2); } // 0x7D6F9A3EF26136A0 0xBB54ECCA b323
 	NATIVE_DECL void _SET_VEHICLE_CAN_BE_LOCKED_ON(Vehicle vehicle, BOOL canBeLockedOn, BOOL unk) { invoke<Void>(0x1DDA078D12879EEE, vehicle, canBeLockedOn, unk); } // 0x1DDA078D12879EEE b463
 	NATIVE_DECL void SET_VEHICLE_ALLOW_NO_PASSENGERS_LOCKON(Vehicle veh, BOOL toggle) { invoke<Void>(0x5D14D4154BFE7B2C, veh, toggle); } // 0x5D14D4154BFE7B2C 0x8BAAC437 b323
@@ -6013,8 +6015,6 @@ namespace VEHICLE
 	NATIVE_DECL void SET_VEHICLE_INACTIVE_DURING_PLAYBACK(Vehicle vehicle, BOOL toggle) { invoke<Void>(0x06582AFF74894C75, vehicle, toggle); } // 0x06582AFF74894C75 0x50F89338 b323
 	NATIVE_DECL void SET_VEHICLE_ACTIVE_DURING_PLAYBACK(Any p0, BOOL p1) { invoke<Void>(0xDFFCEF48E511DB48, p0, p1); } // 0xDFFCEF48E511DB48 0xEB7D7C27 b323
 	NATIVE_DECL BOOL IS_VEHICLE_SPRAYABLE(Vehicle vehicle) { return invoke<BOOL>(0x8D474C8FAEFF6CDE, vehicle); } // 0x8D474C8FAEFF6CDE 0x5EB00A6A b323
-	NATIVE_DECL void _SET_VEHICLE_ENGINE_TORQUE_MULTIPLIER(Vehicle vehicle, float value) { invoke<Void>(0xB59E4BD37AE292DB, vehicle, value); } // 0xB59E4BD37AE292DB 0x642DA5AA
-	NATIVE_DECL void _SET_VEHICLE_ENGINE_POWER_MULTIPLIER(Vehicle vehicle, float value) { invoke<Void>(0x93A3996368C94158, vehicle, value); } // 0x93A3996368C94158 0xE943B09C
 	NATIVE_DECL void SET_VEHICLE_ENGINE_CAN_DEGRADE(Vehicle vehicle, BOOL toggle) { invoke<Void>(0x983765856F2564F9, vehicle, toggle); } // 0x983765856F2564F9 0x081DAC12 b323
 	NATIVE_DECL void _0xF0E4BA16D1DB546C(Vehicle vehicle, int p1, int p2) { invoke<Void>(0xF0E4BA16D1DB546C, vehicle, p1, p2); } // 0xF0E4BA16D1DB546C 0x5BD8D82D b323
 	NATIVE_DECL void _0xF87D9F2301F7D206(Vehicle vehicle) { invoke<Void>(0xF87D9F2301F7D206, vehicle); } // 0xF87D9F2301F7D206 0x450AD03A b323

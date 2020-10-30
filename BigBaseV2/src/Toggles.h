@@ -87,6 +87,7 @@ namespace big {
 		bool visu_tracers = false;
 		bool visu_bone_esp = false;
 		bool visu_dynamic_tracer_alpha = false;
+		bool visu_snow = false;
 	};
 	inline CToggles g_toggles;
 }

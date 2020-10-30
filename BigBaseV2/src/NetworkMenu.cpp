@@ -39,9 +39,7 @@ namespace big {
 								if (p.name != "NOTCONNECTED") {
 									ImGui::TableNextRow();
 									ImGui::TableSetColumnIndex(0);
-									if (ImGui::Button(p.name.c_str())) {
-										/*g_c_functions.selected.insert(std::pair<CFunctions::NPlayer, bool>(p, true));*/
-									}
+									ImGui::Text(p.name.c_str());
 									ImGui::TableSetColumnIndex(1);
 									ImGui::Text("%i/%i HP",p.health,p.maxHealth);
 									ImGui::TableSetColumnIndex(2);
@@ -93,8 +91,7 @@ namespace big {
 					if (ImGui::BeginTabItem("Lobby", NULL)) {
 
 						ImGui::Checkbox("Money Lobby", &g_toggles.lobby_drop_money);
-						ImGui::SliderInt("Money Speed", &g_vars.drop_money_speed, 10, 2000);
-
+						ImGui::SliderInt("Money Speed", &g_vars.drop_money_speed, 1, 2000);
 						ImGui::EndTabItem();
 					}
 					ImGui::EndTabBar();

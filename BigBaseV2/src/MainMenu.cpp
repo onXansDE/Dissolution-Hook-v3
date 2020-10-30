@@ -50,7 +50,9 @@ namespace big {
 					ImGui::EndMenu();
 				}
 				if (ImGui::BeginMenu("Help")) {
-					ImGui::MenuItem("About");
+					if (ImGui::MenuItem("My Discord")) {
+						system("start https://discord.gg/qcZxkrz");
+					}
 					ImGui::EndMenu();
 				}
 				ImGui::EndMenuBar();
@@ -60,6 +62,7 @@ namespace big {
 				int currentwidth = ImGui::GetWindowSize().x;
 				int nextwidth = (currentwidth - main_menu_button_size.x) / 2;
 				ImGui::SameLine(nextwidth);
+				ImGui::Text("Made by onXan#1772");
 				ImGui::Text("Mods");
 				ImGui::Spacing();
 				ImGui::SameLine(nextwidth);

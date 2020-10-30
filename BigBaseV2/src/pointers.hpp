@@ -33,6 +33,9 @@ namespace big
 
 		IDXGISwapChain **m_swapchain{};
 
+		using SessionWeather = void(int a1, int weather_id, int a3, __int64 a4);
+		SessionWeather* m_SessionWeather;
+
 		PVOID m_model_spawn_bypass;
 	};
 

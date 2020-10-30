@@ -49,6 +49,7 @@ namespace big {
 					ImGui::TableNextCell();
 					ImGui::Text("Others");
 					ImGui::Checkbox("LASERPOINTER", &g_toggles.weps_laser_pointer);
+					ImGui::Checkbox("Snow", &g_toggles.visu_snow);
 					ImGui::EndTable();
 				}
 			}

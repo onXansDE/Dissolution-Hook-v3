@@ -630,7 +630,7 @@ namespace big
 		}
 
 		if (g_toggles.self_superjump) {
-			gta_util::get_local_ped()->m_playerinfo->m_frame_flags |= 1 << 14;
+			//gta_util::get_local_ped()->m_playerinfo->m_frame_flags |= 1 << 14;
 			if (g_vars.self_ultrajump_force > 0) {
 				WEAPON::REMOVE_WEAPON_FROM_PED(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("GADGET_PARACHUTE"));
 				if (PED::IS_PED_JUMPING(PLAYER::PLAYER_PED_ID()))
@@ -747,17 +747,17 @@ namespace big
 		}
 
 		if (g_toggles.weps_explosive_melee) {
-			gta_util::get_local_ped()->m_playerinfo->m_frame_flags |= 1 << 13;
+			//gta_util::get_local_ped()->m_playerinfo->m_frame_flags |= 1 << 13;
 		}
 
 		if (g_toggles.weps_fire_ammo)
 		{
-			gta_util::get_local_ped()->m_playerinfo->m_frame_flags |= 1 << 12;
+			//gta_util::get_local_ped()->m_playerinfo->m_frame_flags |= 1 << 12;
 		}
 
 		if (g_toggles.weps_explosive_ammo)
 		{
-			gta_util::get_local_ped()->m_playerinfo->m_frame_flags |= 1 << 11;
+			//gta_util::get_local_ped()->m_playerinfo->m_frame_flags |= 1 << 11;
 		}
 
 
@@ -1025,6 +1025,14 @@ namespace big
 					}
 				}
 			});
+		}
+
+		if (g_toggles.visu_snow) {
+			MISC::SET_WEATHER_TYPE_NOW_PERSIST("XMAS");
+			*script_global(262145 + 4723).as<bool*>() = true;
+			//g_pointers->m_SessionWeather(1, 9, 76, 0);
+			GRAPHICS::_SET_FORCE_PED_FOOTSTEPS_TRACKS(1);
+			GRAPHICS::_SET_FORCE_VEHICLE_TRAILS(1);
 		}
 
 		//RECOVERY

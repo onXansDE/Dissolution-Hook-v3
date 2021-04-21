@@ -1,6 +1,7 @@
-# BigBaseV2
-A mod menu base for Grand Theft Auto V.
+# Dissolution Hook
+A mod menu for Grand Theft Auto V.
 Strictly for educational purposes.
+(Not working anymore)
 
 ## Features
 * ImGui–based user interface

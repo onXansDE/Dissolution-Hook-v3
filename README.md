@@ -1,5 +1,5 @@
 # Dissolution Hook
-A mod menu for Grand Theft Auto V.
+A mod menu for Grand Theft Auto Online.
 Strictly for educational purposes.
 (Not working anymore)
 
@@ -7,13 +7,11 @@ Strictly for educational purposes.
 * ImGui–based user interface
 * Unloading at runtime
 * Log console
-* Script fibers
-* Fiber pool
-* Access to YSC script globals
-* scrProgram–based native hook
+* Detailed Options
+* Custom Color Settings
 
 ## Building
-To build BigBaseV2 you need:
+To build Dissolution-Hook-v3 you need:
 * Visual Studio 2019
 * [Premake 5.0](https://premake.github.io/download.html) in your PATH
 
